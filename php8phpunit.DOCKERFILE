@@ -1,4 +1,6 @@
-FROM php:8
+FROM php:8.3
+
+ADD . /var/www
 
 RUN pecl install --force mongodb
 RUN echo "extension=mongodb.so" > /usr/local/etc/php/conf.d/mongodb.ini
